@@ -1,0 +1,29 @@
+<?php
+    //Unset
+    setcookie('username', 'Frank', time()+ (86400 * 30));// 1 day
+
+    //Delete Cookie
+    setcookie('username', 'Frank', time() - 3600);
+
+    if(count($_COOKIE) > 0) { //There is cookie there are set
+        echo 'There are '. count($_COOKIE). ' cookies saved <br>';
+    }
+    else {
+        echo 'There are no cookies <br>';
+    }
+    if(isset($_COOKIE['username'])) {
+        echo 'User '. $_COOKIE['username'] . ' is set <br>';
+    } else {
+        echo 'User is not set';
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PHP Cookies</title>
+</head>
+<body>
+    
+</body>
+</html>
